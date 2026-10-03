@@ -1,0 +1,7 @@
+﻿services:
+  minibankapi:
+    image: minibankapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+

@@ -1,0 +1,11 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/.idea/.idea.MiniBankAPI/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.idea.MiniBankAPI/.idea/.gitignore
+/.idea/.idea.MiniBankAPI/.idea/awsToolkit.xml
+/.idea/.idea.MiniBankAPI/.idea/encodings.xml
+/.idea/.idea.MiniBankAPI/.idea/indexLayout.xml
+/.idea/.idea.MiniBankAPI/.idea/vcs.xml
