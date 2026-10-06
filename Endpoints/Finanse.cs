@@ -6,7 +6,7 @@ namespace MiniBankAPI.Endpoints;
 
 public static class Finanse
 {
-    public static void map_konta_endpoints(this WebApplication app)
+    public static void map_finanse_endpoints(this WebApplication app)
     {
         var finanse_grupa = app.MapGroup("/api/finanse");
 
