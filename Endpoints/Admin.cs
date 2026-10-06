@@ -9,13 +9,13 @@ public static class Admin
         // cel: akutalizacje kursow
         // in: [{waluta, cena},]
         // out: [{waluta, cena_kup, cena_sprzedaj},]
-        // werfik: naglowek X-User-Id
+        // werfik: naglowek X-Api-Key
         // dodatek: cene zmien na +5% na kup na sprzedaj -5% i sprawdz czy cena w porpwaniu do starej nie rozni sie wiecej niz 20%
         adminGrupa.MapPost("set_kurs", MiniBankAPI.Services.Admin.SetKurs);
         
         // cel wyswietlenia aktualnego zysk banku
         // out int
-        // werfik: naglowek X-User-Id
+        // werfik: naglowek X-Api-Key
         adminGrupa.MapGet("zysk", MiniBankAPI.Services.Admin.Zysk);
         
     }
