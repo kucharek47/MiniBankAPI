@@ -14,19 +14,19 @@ public static class Konto
         // in: waluta
         // out: wiersz tablicy Account bez saldo
         // werfik: naglowek X-User-Id
-        konta_grupa.MapPost("/add", MiniBankAPI.Services.Konto.ApiKontaAdd);
+        konta_grupa.MapPost("/add", MiniBankAPI.Services.Konto.Add);
 
         // cel: wylistowanie wszystkich kont nalezacych do konkretnego uzytkownika
         // in: brak
-        // out: list[id_konta, waluta]
+        // out: [[id_konta, waluta],]
         // werfik: naglowek X-User-Id
-        konta_grupa.MapGet("/lista_posiadanych", MiniBankAPI.Services.Konto.ApiKontaLista);
+        konta_grupa.MapGet("/lista_posiadanych", MiniBankAPI.Services.Konto.ListPosiadanych);
 
         // cel: pobranie szczegolowych danych konkretnego konta gdzie tylko wlasciciel lub admin moze odczytac 
         // in: id_konta
         // out: wiersz tablicy Account
         // werfik: naglowek X-User-Id
         // dodatki: rate limiter na zapytania
-        konta_grupa.MapGet("/{id_konta}", MiniBankAPI.Services.Konto.ApiKontaId);
+        konta_grupa.MapGet("/{id_konta}", MiniBankAPI.Services.Konto.IdKonta);
     }
 }
