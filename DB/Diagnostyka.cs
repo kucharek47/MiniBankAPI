@@ -1,4 +1,4 @@
-﻿namespace MiniBankAPI.db;
+﻿namespace MiniBankAPI.DB;
 
 public class Diagnostyka
 {
