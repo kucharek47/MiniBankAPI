@@ -1,5 +1,5 @@
 ﻿namespace MiniBankAPI.Endpoints;
-
+using MiniBankAPI.Services.Admin;
 public static class Admin
 {
     public static void map_admin_endpoints(this WebApplication app)
@@ -11,12 +11,12 @@ public static class Admin
         // out: [{waluta, cena_kup, cena_sprzedaj},]
         // werfik: naglowek X-Api-Key
         // dodatek: cene zmien na +5% na kup na sprzedaj -5% i sprawdz czy cena w porpwaniu do starej nie rozni sie wiecej niz 20%
-        adminGrupa.MapPost("set_kurs", MiniBankAPI.Services.Admin.SetKurs);
+        adminGrupa.MapPost("set_kurs", SetKurs);
         
         // cel wyswietlenia aktualnego zysk banku
         // out int
         // werfik: naglowek X-Api-Key
-        adminGrupa.MapGet("zysk", MiniBankAPI.Services.Admin.Zysk);
+        adminGrupa.MapGet("zysk", Zysk);
         
     }
 }
