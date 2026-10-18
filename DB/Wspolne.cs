@@ -5,8 +5,8 @@ namespace MiniBankAPI.DB;
 
 public static class Wspolne
 {
-    public static async Task<bool> SprawdzWlasnoscKonta(Sesja db, int id_uzytkownika, int id_konta)
+    public static async Task<bool> SprawdzWlasnosc(Sesja db, int idUzytkownika, int idKonta)
     {
-        return await db.Accounts.AnyAsync(k => k.Id == id_konta && k.UserId == id_uzytkownika);
+        return await db.Accounts.AnyAsync(k => k.Id == idKonta && k.UserId == idUzytkownika);
     }
 }

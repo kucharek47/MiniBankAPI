@@ -50,9 +50,9 @@ public static class Konto
         Sesja db
     )
     {
-        var Owner = await DB.Wspolne.SprawdzWlasnosc(db, idUser, id_konta);
+        bool owner = await DB.Wspolne.SprawdzWlasnosc(db, idUser, id_konta);
         
-        if (!Owner)
+        if (!owner)
         {
             return Results.NotFound();
         }
